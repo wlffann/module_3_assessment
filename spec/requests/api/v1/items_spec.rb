@@ -38,6 +38,17 @@ describe 'Items API' do
   it 'DELETE /api/v1/items/:id' do
     delete '/api/v1/items/1'
 
-    expect(response).to be(204)
+    expect(response.status).to be(204)
+  end
+
+  it 'POST /api/v1/items/:id' do
+    item = Item.find(1)
+    post '/api/v1/items/1?name=NewName&description=NewDescription&image_url=http://dmeszqrvxc7wa.cloudfront.net/images/product/new/medium/11821006.jpg' 
+    item.reload
+
+    expect(response.status).to be(201)
+    expect(item['name']).to eq("NewName")
+    expect(item['description']).to eq("NewDescription")
+    expect(item['image_url']).to eq("http://dmeszqrvxc7wa.cloudfront.net/images/product/new/medium/11821006.jpg")
   end
 end
