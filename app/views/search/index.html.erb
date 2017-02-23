@@ -1,0 +1,10 @@
+<h1><%= @results.count %> total stores</h1>
+
+<%= @results.each do |store| %>
+  <%= store.long_name %>
+  <%= store.city %>
+  <%= store.distance %>
+  <%= store.phone_number %>
+  <%= store.type %>
+<% end %>
+
