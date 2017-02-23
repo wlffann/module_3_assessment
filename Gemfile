@@ -13,6 +13,7 @@ gem "therubyracer"
 gem "less-rails-bootstrap"
 gem "minitest-rails"
 gem "figaro"
+gem "httparty"
 
 group :development do
   gem "spring"
@@ -28,4 +29,5 @@ group :test do
   gem "vcr"
   gem "webmock"
   gem "factory_girl_rails"
+  gem "database_cleaner"
 end
