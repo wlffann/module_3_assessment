@@ -42,9 +42,9 @@ describe 'Items API' do
   end
 
   it 'POST /api/v1/items/:id' do
-    item = Item.find(1)
-    post '/api/v1/items/1?name=NewName&description=NewDescription&image_url=http://dmeszqrvxc7wa.cloudfront.net/images/product/new/medium/11821006.jpg' 
-    item.reload
+    params = { :item => {:name => "NewName", :description => "NewDescription" ,:image_url => "http://dmeszqrvxc7wa.cloudfront.net/images/product/new/medium/11821006.jpg" } } 
+    post '/api/v1/items', params
+    item = JSON.parse(response.body)
 
     expect(response.status).to be(201)
     expect(item['name']).to eq("NewName")
