@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'User searches for stores' do
   it 'using zip code' do
     visit root_path
-    fill_in 'search', with: '80202'
+    fill_in 'q', with: '80202'
     click_on "Search"
 
     expect(current_path).to eq(search_path)

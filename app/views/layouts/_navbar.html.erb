@@ -21,4 +21,14 @@
       </li>
     </ul>
   </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="input-group">
+      <%= form_tag(search_path) do %>
+        <%= label_tag(:q, "Search by zipcode") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+      <% end%>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
 </nav>
