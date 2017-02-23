@@ -31,4 +31,5 @@ group :test do
   gem "webmock"
   gem "factory_girl_rails"
   gem "database_cleaner"
+  gem "launchy"
 end
