@@ -15,6 +15,7 @@ gem "minitest-rails"
 gem "figaro"
 gem "httparty"
 gem "byebug"
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development do
   gem "spring"
