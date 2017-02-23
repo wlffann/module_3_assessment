@@ -12,3 +12,7 @@
   </div>
 <% end %>
 
+<% if @results.total_pages > 1 %>
+  <p>1</p>
+  <p><%= link_to "2", BestBuyService.new("80202").next_page %></p>
+<% end %>
