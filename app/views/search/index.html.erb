@@ -1,8 +1,8 @@
 <h1><%= @results.total %> total stores</h1>
 
-<%= @results.stores.each do |store| %>
+<% @results.stores.each do |store| %>
   <div class='store'>
-    <h2><%= store.long_name %></h2>
+    <h4><%= store.long_name %></h4>
     <ul>
       <li><%= store.city %></li>
       <li><%= store.distance %></li>
